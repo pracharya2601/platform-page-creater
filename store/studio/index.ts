@@ -1,33 +1,37 @@
 import { createSlice } from '@reduxjs/toolkit';
-import {form} from "store/studio/editor";
+import { form } from "store/studio/editor";
 
 export const studioSlice = createSlice({
     name: 'studio',
     initialState: {
-        data: { 
+        data: {
             component: "PageWrapper",
             children: [
                 form
             ],
-            style: {},
+            style: {
+                all: ["text-gray-900", "border-b-1"],
+                tablet: [],
+                desktop: [],
+            },
             props: {},
         }
     },
     reducers: {
-        addComponent(state, action){
+        addComponent(state: any, action: any) {
             return state;
         },
-        updateComponent(state, action) {
+        updateComponent(state: any, action: any) {
             return state;
         },
-        deleteComponent(state, action){
+        deleteComponent(state: any, action: any) {
             return state;
         },
-        moveComponent(state, action) {
+        moveComponent(state: any, action: any) {
             return state;
         }
     }
 })
 
-export const {addComponent, updateComponent, deleteComponent, moveComponent} = studioSlice.actions;
+export const { addComponent, updateComponent, deleteComponent, moveComponent } = studioSlice.actions;
 export default studioSlice.reducer;

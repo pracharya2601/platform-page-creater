@@ -60,6 +60,7 @@ export const form = {
     border: '1px solid red',
     borderRadius: '4px'
   },
+
   props: {
     post: '/',
     isExternalRoute: false,

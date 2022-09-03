@@ -23,7 +23,7 @@ a {
 
 .editor-container {
   display: grid;
-  grid-template-areas: 
+  grid-template-areas:
     'left top top top top right'
     'left center center center center right'
     'left center center center center right'
@@ -35,15 +35,18 @@ a {
   grid-area: left;
   border-right: 1px solid lightgray;
 }
+
 .editor-container .top {
   grid-area: top;
   border-bottom: 1px solid lightgray;
   height: 50px;
 }
+
 .editor-container .center {
   grid-area: center;
   border: 1px solid red;
 }
+
 .editor-container .right {
   grid-area: right;
   border-left: 1px solid lightgray;
@@ -58,7 +61,6 @@ a {
 .editor-container-f {
   width: 100vw;
   height: 100vh;
-  min-width: 700px;
   overflow: auto;
   display: flex;
   justify-content: space-between;
@@ -68,6 +70,7 @@ a {
   /* min-width: 50px; */
   border-right: 1px solid lightgray;
 }
+
 .left-f.open {
   width: 250px;
 }
@@ -76,6 +79,7 @@ a {
   /* min-width: 50px; */
   border-left: 1px solid lightgray;
 }
+
 .right-f.open {
   width: 250px;
 }
@@ -85,6 +89,7 @@ a {
   display: flex;
   flex-direction: column;
 }
+
 .center-f .center-c {
   flex: 1;
   overflow: auto;
@@ -101,6 +106,7 @@ a {
   padding: 0;
   margin: 0;
 }
+
 .btn-holder.left {
   float: right;
   margin: 2px;
@@ -128,6 +134,7 @@ a {
   html {
     color-scheme: dark;
   }
+
   body {
     color: white;
     background: black;
