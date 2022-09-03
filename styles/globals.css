@@ -1,3 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
 html,
 body {
   padding: 0;
@@ -13,6 +19,109 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.editor-container {
+  display: grid;
+  grid-template-areas: 
+    'left top top top top right'
+    'left center center center center right'
+    'left center center center center right'
+    'left center center center center right'
+    'left center center center center right'
+}
+
+.editor-container .left {
+  grid-area: left;
+  border-right: 1px solid lightgray;
+}
+.editor-container .top {
+  grid-area: top;
+  border-bottom: 1px solid lightgray;
+  height: 50px;
+}
+.editor-container .center {
+  grid-area: center;
+  border: 1px solid red;
+}
+.editor-container .right {
+  grid-area: right;
+  border-left: 1px solid lightgray;
+}
+
+.editor-container .left,
+.editor-container .right {
+  height: 100vh;
+  min-width: 50px;
+}
+
+.editor-container-f {
+  width: 100vw;
+  height: 100vh;
+  min-width: 700px;
+  overflow: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-f {
+  /* min-width: 50px; */
+  border-right: 1px solid lightgray;
+}
+.left-f.open {
+  width: 250px;
+}
+
+.right-f {
+  /* min-width: 50px; */
+  border-left: 1px solid lightgray;
+}
+.right-f.open {
+  width: 250px;
+}
+
+.center-f {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.center-f .center-c {
+  flex: 1;
+  overflow: auto;
+  justify-content: center;
+}
+
+.top-f {
+  height: 50px;
+  border-bottom: 1px solid lightgray;
+}
+
+.btn-holder {
+  width: min-content;
+  padding: 0;
+  margin: 0;
+}
+.btn-holder.left {
+  float: right;
+  margin: 2px;
+}
+
+.btn-holder.right {
+  margin: 2px;
+}
+
+.active-editor-box {
+  border: 1px solid blue;
+}
+
+.red {
+  color: red;
+  background: teal;
+  border-bottom: 1px solid red;
+}
+
+.red:hover {
+  color: gray;
 }
 
 @media (prefers-color-scheme: dark) {
