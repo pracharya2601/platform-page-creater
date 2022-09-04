@@ -12,6 +12,8 @@
     "@craftjs/core": "^0.2.0-beta.8",
     "@reduxjs/toolkit": "^1.8.5",
     "classnames": "^2.3.1",
+    "grapesjs": "^0.19.5",
+    "grapesjs-blocks-basic": "^0.1.8",
     "lodash": "^4.17.21",
     "next": "12.2.5",
     "next-redux-wrapper": "^7.0.5",
