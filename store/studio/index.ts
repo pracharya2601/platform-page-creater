@@ -10,7 +10,8 @@ export const studioSlice = createSlice({
                 form
             ],
             style: {
-                all: ["text-gray-900", "border-b-1"],
+                all: ["h-screen"],
+                mobile: ["bg-red-500"],
                 tablet: [],
                 desktop: [],
             },

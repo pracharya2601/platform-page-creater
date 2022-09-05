@@ -1,11 +1,14 @@
 /* eslint-disable react/no-unknown-property */
 import { MutableRefObject, useLayoutEffect, useRef, useState } from "react"
+import CustomIframe from "./CustomFrame"
 
 export default function CenterComponent({ children, left, right }: any) {
     const [dimension, setDimension] = useState({
         x: 1220,
         y: 800,
     })
+
+    let viewType = dimension.x === 1220 ? "desktop" : dimension.x === 620 ? "tablet" : dimension.x === 320 ? "mobile" : "";
 
     return (
         <div className="sm">
@@ -31,6 +34,7 @@ export default function CenterComponent({ children, left, right }: any) {
                 <div className={`border-2 h-full ml-auto mr-auto`} id="" style={{ minWidth: `${dimension.x}px`, height: `${dimension.y}px` }}>
                     {children}
                 </div>
+
             </div>
         </div>
     )

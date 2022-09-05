@@ -13,8 +13,8 @@ const Home: NextPage = () => {
   console.log(data)
   return (
     <EditorWrapper>
-      <PageWrapper something="something" style={data.style}>
-        Hello
+      <PageWrapper style={data.style}>
+        <div className='text-red-500 bg-red-100'>Hello</div>
       </PageWrapper>
     </EditorWrapper>
   )

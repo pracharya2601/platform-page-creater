@@ -6,6 +6,11 @@ const initialData = {};
 export const editorSlice = createSlice({
     name: "editor",
     initialState: {
+        viewDimension: {
+            type: 'desktop',
+            x: 1220,
+            y: 800,
+        },
         hello: '',
     },
     reducers: {
